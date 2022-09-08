@@ -1,5 +1,5 @@
 import { API_URL } from '../config.js';
-console.log(API_URL);
+
 //selectors
 export const getTableById = ({ tables }, tableId) => tables.find((table) => table.id === tableId);
 export const getAllTables = ({ tables }) => tables;
@@ -7,6 +7,7 @@ export const getAllTables = ({ tables }) => tables;
 export const getAllCategories = ({ categories }) => categories;
 export const getPostsByCategoryName = ({ posts }, category) =>
   posts.filter((post) => post.category === category);
+
 // actions
 const createActionName = (actionName) => `app/tables/${actionName}`;
 export const updateTables = (payload) => ({ type: UPDATE_TABLES, payload });

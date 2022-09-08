@@ -36,43 +36,43 @@ function TableForm({ actionText, ...props }) {
   if ((people) < 0) setPeople(0);
   if ((bill) < 0) setBill(0);
 
-  if (!tableData) return <Navigate to="/" />;
+  if (!tableData) return <Navigate to='/' />;
 
   return (
     <div>
-      <Row className="mb-5">
+      <Row className='mb-5'>
         <h1>Table { id } </h1>
         <Form onSubmit={ handleSubmit }>
-          <Form.Group className="mb-3">
-            <Row className="mb-3">
+          <Form.Group className='mb-3'>
+            <Row className='mb-3'>
               <Col md={ 1 }>
                 <b>People:</b>
               </Col>
               <Form.Control
-                className="pl-3"
+                className='pl-3'
                 style={ { width: '50px', marginLeft: '10px', marginRight: '10px' } }
-                type="number"
+                type='number'
                 value={ status === 'Busy' ? people : 0 }
                 onChange={ (e) => setPeople(e.target.value) }
               />
               <Form.Control
                 style={ { width: '50px', marginLeft: '10px' } }
-                type="number"
+                type='number'
                 onChange={ (e) => setMaxPeople(e.target.value) }
                 value={ maxPeople }
               />
             </Row>
-            <Row className="mb-3">
+            <Row className='mb-3'>
               <Col md={ 1 }>
                 <b>Status:</b>
               </Col>
               <Col md={ 2 }>
                 <Form.Select
-                  as="select"
+                  as='select'
                   onChange={ (e) => setStatus(e.target.value) }
                   value={ status }
-                  aria-label="Select category">
-                  <option disabled value="1">
+                  aria-label='Select category'>
+                  <option disabled value='1'>
                     Select category
                   </option>
                   { statusData.map((category, index) => (
@@ -92,8 +92,8 @@ function TableForm({ actionText, ...props }) {
                 </Col>
                 <Col md={ 2 }>
                   <Form.Control
-                    type="number"
-                    placeholder="current bill"
+                    type='number'
+                    placeholder='current bill'
                     value={ status === 'Busy' ? bill : 0 }
                     onChange={ (e) => setBill(e.target.value) }
                   />
@@ -101,7 +101,7 @@ function TableForm({ actionText, ...props }) {
               </Row>
             ) }
           </Form.Group>
-          <Button variant="dark" as="input" value={ actionText } type="submit" style={ { marginTop: '10px' } } />
+          <Button variant='dark' as='input' value={ actionText } type='submit' style={ { marginTop: '10px' } } />
         </Form>
       </Row>
     </div>

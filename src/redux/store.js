@@ -2,6 +2,7 @@ import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import tablesReducer from './tablesReducer';
 import statusReducer from './statusReducer';
 import thunk from 'redux-thunk';
+
 const subreducers = {
   tables: tablesReducer,
   status: statusReducer

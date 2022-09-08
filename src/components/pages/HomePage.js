@@ -9,7 +9,7 @@ function HomePage() {
 
   return (
     <div>
-      <h1 className="mb-5">All tables</h1>
+      <h1 className='mb-5'>All tables</h1>
       {tablesData.map((table, index) => (
         <SingleTable
           key={index}

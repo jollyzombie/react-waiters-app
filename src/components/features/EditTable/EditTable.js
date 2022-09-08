@@ -8,10 +8,10 @@ function EditTable() {
   const { tableId } = useParams();
   const tableData = useSelector((state) => getTableById(state, tableId));
 
-  if (!tableData) return <Navigate to="/" />;
+  if (!tableData) return <Navigate to='/' />;
   return (
     <TableForm
-      actionText="Change"
+      actionText='Change'
       id={tableData.id}
       people={tableData.people}
       maxPeople={tableData.maxPeople}
